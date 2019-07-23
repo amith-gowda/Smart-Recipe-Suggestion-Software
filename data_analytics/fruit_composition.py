@@ -12,7 +12,7 @@ fruit = [x.lower() for x in fruit]
 dd =dataset[dataset.vegetarian==0 ][list(set(fruit).intersection(dataset.columns.tolist()))].sum(axis=0).sort_values(ascending=False)
 dx = dd[:20]
 dx["others"]= dd[20:].sum()
-plt.figure(figsize=(5,5))
-plt.pie(dx,labels=dx.index,autopct='%1.1f%%', startangle=290)
+plt.figure(figsize=(6,6))
+plt.pie(dx,labels=dx.index,autopct='%1.1f%%', startangle=90)
 plt.axis("equal")
-plt.title("Composistion of usage of Fruits recipes", y =1.08)
+plt.title("Composistion of usage of Fruits in recipes", y =1.08)

@@ -9,7 +9,7 @@ keep_col = ['title','vegetarian']
 new_dataset = dataset[keep_col]
 
 vnv_comp = dataset.groupby(["vegetarian"])["title"].count()
-plt.figure(figsize=(4,4))
+plt.figure(figsize=(6,6))
 plt.pie(vnv_comp,labels=["Non-Vegetarian","Vegetarian"],autopct='%1.1f%%', startangle=90, colors=["red","lightgreen"])
 plt.axis("equal")
 
