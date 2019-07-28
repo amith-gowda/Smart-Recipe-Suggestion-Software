@@ -4,11 +4,19 @@ from sklearn.preprocessing import MinMaxScaler
 
 data = pd.read_csv("../data/recipes.csv")
 
-nutrients = [['fat', 'protein']]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+nutrients = [['fat', 'protein'],['fat','calories']]   
+
+
+dairy_comp = data.groupby(["dairy free"])["title"].count()
+plt.figure(figsize=(5,5))
+plt.pie(dairy_comp,labels=["Dairy","Dairy-Free"],autopct='%1.1f%%', startangle=90, colors=["blue","white"])
+plt.axis("equal")
+
+print(dairy_comp)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 
 
-fig, ax = plt.subplots(6, 2, sharex=True, sharey=True, figsize = (8, 12))
+fig, ax = plt.subplots(6, 2, sharex=True, sharey=True, figsize = (8, 20))
 plt.suptitle('Dairy v Dairy-Free', fontsize = 25, fontweight='bold', y = 0.95)
 
 counter_x = 0
