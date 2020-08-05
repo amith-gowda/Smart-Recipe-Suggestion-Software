@@ -5,7 +5,7 @@ A smart recipe suggestion application that takes in a list of ingredients from t
 returns a list of food dishes that can be prepared using these ingredients.
 
 Instructions...
-1.   Launch Cociner beta application.
+1.   Launch Cocinero beta application.
 2.   Choose to enter list of ingredients or select from a list of commonly used ingredients.
 3.   Enter your input.
 4.   Select one dish from a list of suggestions.
